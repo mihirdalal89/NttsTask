@@ -1,0 +1,11 @@
+.register{
+    height: 100vh;
+}
+
+.register-card{
+    width: 400px;
+}
+
+.example-container mat-form-field{
+    width: 368px;
+}

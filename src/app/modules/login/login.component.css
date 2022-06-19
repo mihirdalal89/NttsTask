@@ -1,0 +1,20 @@
+*.active{
+    background-color: rgba(219, 229, 238, 0.225);
+    opacity: 0.9;
+}
+
+.login{
+    height: 100vh;
+}
+
+.login-card{
+    width: 400px;
+}
+
+.example-container mat-form-field{
+    width: 368px;
+}
+
+#link{
+    transition: all 0.3s;
+}

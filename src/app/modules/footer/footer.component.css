@@ -1,0 +1,23 @@
+.footer{
+    height: 250px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.active{
+    color: aqua !important;
+}
+
+.footer-relative{
+    height: 100vh;
+    position: relative;
+}
+
+#hr div{
+    width: 2px !important;
+    height: 100%;
+    background-color: #fff;
+}

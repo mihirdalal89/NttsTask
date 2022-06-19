@@ -1,0 +1,44 @@
+{
+  "userdata": [
+    {
+      "email": "abc@gmail.com",
+      "number": 8729278282,
+      "role": "USER",
+      "password": "abc@12",
+      "confirmPassword": "abc@12",
+      "id": 1
+    },
+    {
+      "email": "abc@gmail.com",
+      "number": 1098297987,
+      "role": "USER",
+      "password": "abc@12",
+      "confirmPassword": "abc@12",
+      "id": 2
+    },
+    {
+      "email": "abc@gmail.com",
+      "number": 7617615617,
+      "role": "USER",
+      "password": "abc@12",
+      "confirmPassword": "abc@12",
+      "id": 3
+    },
+    {
+      "email": "pat@gmail.com",
+      "number": 7287261768,
+      "role": "ADMIN",
+      "password": "pat@12",
+      "confirmPassword": "pat@12",
+      "id": 4
+    },
+    {
+      "email": "tommy@gmail.com",
+      "number": 1278172889,
+      "role": "SUPERVISOR",
+      "password": "tommy@12",
+      "confirmPassword": "tommy@12",
+      "id": 5
+    }
+  ]
+}

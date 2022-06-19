@@ -1,0 +1,33 @@
+<div class="container text-center border border-primary p-3">
+    <div class="child-component">
+        <h1>Child Component</h1>
+        <div class="customer-selected-edit-form">
+            <form [formGroup]="editCustomerForm" (ngSubmit)="submitEditedData(editCustomerForm)">
+                <div class="">
+                    <mat-form-field class="example-full-width w-50" appearance="fill">
+                        <mat-label>ID</mat-label>
+                        <input matInput formControlName="id" readonly>
+                    </mat-form-field>
+                </div>
+                <div class="">
+                    <mat-form-field class="example-full-width w-50" appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name">
+                    </mat-form-field>
+                </div>  
+                <div class="">
+                    <mat-form-field class="example-full-width w-50" appearance="fill">
+                        <mat-label>Age</mat-label>
+                        <input matInput formControlName="age">
+                    </mat-form-field>
+                </div>
+                <div class="text-center">
+                    <button type="submit" mat-raised-button color="primary" [disabled]="editCustomerForm.invalid">
+                        <span class="pe-1">Edit</span>
+                        <mat-icon class="edit-logo pt-1">edit</mat-icon>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

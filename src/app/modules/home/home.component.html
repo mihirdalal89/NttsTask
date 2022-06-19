@@ -1,0 +1,31 @@
+<div class="home d-flex justify-content-center">
+    <div class="w-75">
+        <div class="mt-3">
+            <form [formGroup]="inputSearchForm">
+                <mat-form-field class="example-full-width w-100" appearance="fill">
+                    <!-- <mat-label>Favorite food</mat-label> -->
+                    <input matInput placeholder="Search Rxjs" formControlName="searchTerm" name="searchValue" class="">
+                </mat-form-field>
+                <!-- <input type="text" required name="searchTerm" ngModel autocomplete="off" id="" class="form-control" placeholder="Search"> -->
+            </form>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">username</th>
+                    <th scope="col">email</th>
+                    <th scope="col">phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of source">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.username}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.phone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div [ngClass]="isDarkTheme?'dark-mode':''">
+    <mat-toolbar [color]="!isDarkTheme?'primary':''">
+        <div class="d-flex flex-column">
+            <span>NTTS</span>
+            <span>TASK</span>
+        </div>
+        <nav class="nav">
+            <a class="nav-link" routerLinkActive="active" routerLink="/home">Home</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/category" *ngIf="isRole=='admin'">Category</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/product" *ngIf="isRole=='supervisor'">Product</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/miscellaneous">Miscellaneous</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/component-communication">Component Communication</a>
+            <a class="nav-link" routerLinkActive="active" routerLink="/calculator">Calculator</a>
+            <div class="pt-2">
+                <form action="" [formGroup]="checkToggleForm">
+                    <mat-slide-toggle formControlName="slide"></mat-slide-toggle>
+                </form>
+            </div>
+        </nav>
+        <span class="example-spacer"></span>
+        <button mat-icon-button class="example-icon">
+            <mat-icon matTooltip="Logout" (click)="logout()">logout</mat-icon>
+        </button>
+    </mat-toolbar>
+</div>

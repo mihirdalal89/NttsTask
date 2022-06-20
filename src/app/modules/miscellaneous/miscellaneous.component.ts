@@ -89,6 +89,9 @@ export class MiscellaneousComponent implements OnInit, AfterViewInit, OnDestroy 
       zipcode:Math.round(Math.random()*1000000)
     }
   ]
+
+  sampleArr = ['hello', 'bird', 'table', 'football', 'pipe', 'code']
+  outputArr:any=[]
   constructor(private authService:AuthService) { }
 
   ngOnInit(): void {
@@ -105,6 +108,10 @@ export class MiscellaneousComponent implements OnInit, AfterViewInit, OnDestroy 
       this.isSet = false
     },6000)
     // setTimeout(this.hide,7000)
+    this.sampleArr.forEach((value)=>{
+      // console.log(value);
+      this.outputArr.push(value);
+    })    
   }
   
   ngAfterViewInit(): void {

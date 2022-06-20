@@ -43,7 +43,12 @@
         <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users" #paginator>
         </mat-paginator>
     </div>
-    <!-- <div class="mt-5" *ngIf="isSet">
-        <h1>NEW</h1>
-    </div> -->
+    <div class="mt-5">
+        <h2>For Each Loop</h2>
+        <ul>
+            <li *ngFor="let output of outputArr">
+                {{output | titlecase}}
+            </li>
+        </ul>
+    </div>
 </div>

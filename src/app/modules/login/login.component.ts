@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, DoCheck, ElementRef, OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { RegisterLoginService } from 'src/app/core/register-login/register-login.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
@@ -11,11 +11,12 @@ import jwtDecode from 'jwt-decode';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, AfterViewInit {
   hide = true;
   loginForm!:FormGroup;
   isLoggedIn:boolean = true;
   jwt:string = "";
+  @ViewChild('emailInput') emailInput!:ElementRef
   constructor(
     private registerLoginService: RegisterLoginService,
     private toastr: ToastrService,
@@ -30,6 +31,11 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  
+  
+  ngAfterViewInit(): void {
+    console.log(this.emailInput)
   }
 
   login(loginValue:any){
